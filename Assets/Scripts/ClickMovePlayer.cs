@@ -3,6 +3,8 @@ using UnityEngine.AI;
 
 public class ClickMovePlayer : MonoBehaviour
 {
+	private const float NavMeshSampleDistance = 4f;
+
 	public NavMeshAgent AgentToMove;
 
 	private void OnMouseDown()
@@ -13,7 +15,7 @@ public class ClickMovePlayer : MonoBehaviour
 		destination.y = 0;
 
 		AgentToMove.SetDestination(NavMesh.SamplePosition(destination, out hit,
-			4f, NavMesh.AllAreas)
+			NavMeshSampleDistance, NavMesh.AllAreas)
 			? hit.position
 			: destination);
 	}
