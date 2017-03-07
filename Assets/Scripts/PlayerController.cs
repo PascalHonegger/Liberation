@@ -23,15 +23,11 @@ public class PlayerController : MonoBehaviour
 			NavMeshSampleDistance, NavMesh.AllAreas)
 			? hit.position
 			: pointerEventData.pointerCurrentRaycast.worldPosition);
-
-		/*var destination = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-		destination.y = 0;
-		_agent.SetDestination(destination);*/
 	}
 
 	private void Update()
 	{
 		//TODO Maybe there is a better solution?
-		transform.eulerAngles = new Vector3(90, 0, 0);
+		transform.eulerAngles = new Vector3(0, 0, 0);
 	}
 }
