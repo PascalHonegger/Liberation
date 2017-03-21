@@ -786,8 +786,8 @@ PlayerSettings:
     Unity_Ads: 0
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: 
-  projectName: 
-  organizationId: 
+  cloudProjectId: 98ca1f94-4701-4829-b1bc-0fbd6b73a651
+  projectName: Liberation
+  organizationId: team-pascal
   cloudEnabled: 0
   enableNewInputSystem: 0
