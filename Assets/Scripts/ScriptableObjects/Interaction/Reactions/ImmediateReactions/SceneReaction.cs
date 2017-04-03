@@ -22,9 +22,6 @@ public class SceneReaction : Reaction
 
 	protected override void ImmediateReaction()
 	{
-		// Save the StartingPosition's name to the data asset.
-		playerSaveData.Save(PlayerController.StartingPositionKey, startingPointInLoadedScene);
-
 		// Start the scene loading process.
 		_sceneController.FadeAndLoadScene(this);
 	}

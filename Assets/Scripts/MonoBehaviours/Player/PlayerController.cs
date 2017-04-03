@@ -4,8 +4,6 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-	public const string StartingPositionKey = "starting position";
-
 	private const float NavMeshSampleDistance = 4f;
 
 	private NavMeshAgent _agent;
