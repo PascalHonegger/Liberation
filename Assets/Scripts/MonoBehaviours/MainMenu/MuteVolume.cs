@@ -20,21 +20,19 @@ public class MuteVolume : MonoBehaviour
 
 	private bool VolumeActive
 	{
-		get { return _audioToMute.mute; }
+		get { return !_audioToMute.mute; }
 		set
 		{
-			_audioToMute.mute = value;
-			if (_audioToMute.mute)
+			_audioToMute.mute = !value;
+			if (VolumeActive)
 			{
 				VolumeActiveLabel.enabled = true;
 				VolumeMutedLabel.enabled = false;
-				_audioToMute.mute = false;
 			}
 			else
 			{
 				VolumeActiveLabel.enabled = false;
 				VolumeMutedLabel.enabled = true;
-				_audioToMute.mute = true;
 			}
 		}
 	}

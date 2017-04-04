@@ -21,7 +21,8 @@ public class HideUiElements : MonoBehaviour
 	{
 		foreach (var o in _gameObjectsToHide)
 		{
-			o.SetActive(true);
+			if(o != null)
+				o.SetActive(true);
 		}
 	}
 }

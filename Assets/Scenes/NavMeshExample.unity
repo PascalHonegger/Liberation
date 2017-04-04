@@ -409,9 +409,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.06666667
+  m_VoxelSize: 0.033333335
   m_BuildHeightMesh: 0
-  m_BakedNavMeshData: {fileID: 23800000, guid: 5206de2d785bf42458a087629ea2397a, type: 2}
+  m_BakedNavMeshData: {fileID: 23800000, guid: 378b022368fc28f45b5e928633cb6262, type: 2}
 --- !u!4 &543473911 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4958946276881416, guid: 2a43acf4e0b46ea44af0e55d89b2bbd8,
@@ -1658,8 +1658,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dc6b17b276d6948903ade30dec71eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 1
   sceneName: Credits
-  playerSaveData: {fileID: 11400000, guid: 55d72825bf06cf44e9cbc1b37812cc6f, type: 2}
 --- !u!114 &1823654269 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11484708, guid: d48734bd22479a14cb1a52b40aa09db4,

@@ -7,7 +7,7 @@ public class Inventory : MonoBehaviour
 	public Item[] items = new Item[numItemSlots]; // The Items that are carried by the player.
 
 
-	public const int numItemSlots = 4;
+	public const int numItemSlots = 3;
 		// The number of items that can be carried.  This is a constant so that the number of Images and Items are always the same.
 
 
