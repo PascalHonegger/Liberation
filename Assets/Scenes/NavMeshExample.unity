@@ -898,11 +898,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4503200118915164, guid: 3b8b92a7df2e3304c9e51eedae4236f9, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 4503200118915164, guid: 3b8b92a7df2e3304c9e51eedae4236f9, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -3.38
       objectReference: {fileID: 0}
     - target: {fileID: 4503200118915164, guid: 3b8b92a7df2e3304c9e51eedae4236f9, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1658,8 +1658,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dc6b17b276d6948903ade30dec71eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: NavMeshExample
-  startingPointInLoadedScene: LeftDoorEntrance
+  sceneName: Credits
   playerSaveData: {fileID: 11400000, guid: 55d72825bf06cf44e9cbc1b37812cc6f, type: 2}
 --- !u!114 &1823654269 stripped
 MonoBehaviour:

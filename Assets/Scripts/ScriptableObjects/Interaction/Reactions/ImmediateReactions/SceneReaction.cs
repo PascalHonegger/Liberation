@@ -6,7 +6,6 @@
 public class SceneReaction : Reaction
 {
 	public string sceneName; // The name of the scene to be loaded.
-	public string startingPointInLoadedScene; // The name of the StartingPosition in the newly loaded scene.
 	public SaveData playerSaveData; // Reference to the save data asset that will store the StartingPosition.
 
 
