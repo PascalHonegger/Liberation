@@ -124,7 +124,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &312000295
 MonoBehaviour:
@@ -303,7 +303,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!81 &353158845
 AudioListener:
@@ -385,7 +385,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_SizeDelta.x
@@ -393,7 +393,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_AnchorMin.x
@@ -528,7 +528,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -180
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_SizeDelta.x
@@ -536,7 +536,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_AnchorMin.x
@@ -606,7 +606,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!82 &1131390653
 AudioSource:
@@ -774,7 +774,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!114 &1446455602
 MonoBehaviour:
@@ -928,7 +928,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -300
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_SizeDelta.x
@@ -936,7 +936,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 120
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22480890, guid: 6c7afed0b4d56a047a9a515074a2e83f, type: 2}
       propertyPath: m_AnchorMin.x

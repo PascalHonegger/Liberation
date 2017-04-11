@@ -171,7 +171,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4725564651894056, guid: ad63e45bbb4de7843a32e01d3c621bce, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 4725564651894056, guid: ad63e45bbb4de7843a32e01d3c621bce, type: 2}
       propertyPath: m_LocalScale.z
@@ -642,9 +642,9 @@ MonoBehaviour:
   m_OverrideTileSize: 0
   m_TileSize: 256
   m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.033333335
+  m_VoxelSize: 0.1
   m_BuildHeightMesh: 0
-  m_BakedNavMeshData: {fileID: 23800000, guid: 83ffecfd3530ee540befdfbf2246c538, type: 2}
+  m_BakedNavMeshData: {fileID: 23800000, guid: d6a2ac186ac66fa48bd83b8137f0eb52, type: 2}
 --- !u!4 &1391068382 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4725564651894056, guid: ad63e45bbb4de7843a32e01d3c621bce,
