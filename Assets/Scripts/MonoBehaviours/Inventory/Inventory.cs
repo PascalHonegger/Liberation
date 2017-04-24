@@ -1,50 +1,32 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Linq;
+using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
-	public Image[] itemImages = new Image[numItemSlots]; // The Image components that display the Items.
-	public Item[] items = new Item[numItemSlots]; // The Items that are carried by the player.
-
+	public ItemDragDropHandler[] itemHandlers = new ItemDragDropHandler[numItemSlots];
 
 	public const int numItemSlots = 3;
-		// The number of items that can be carried.  This is a constant so that the number of Images and Items are always the same.
-
 
 	// This function is called by the PickedUpItemReaction in order to add an item to the inventory.
 	public void AddItem(Item itemToAdd)
 	{
 		// Go through all the item slots...
-		for (int i = 0; i < items.Length; i++)
+		var emptyItemHandler = itemHandlers.FirstOrDefault(h => h.Item == null);
+
+		if(emptyItemHandler)
 		{
-			// ... if the item slot is empty...
-			if (items[i] == null)
-			{
-				// ... set it to the picked up item and set the image component to display the item's sprite.
-				items[i] = itemToAdd;
-				itemImages[i].sprite = itemToAdd.sprite;
-				itemImages[i].enabled = true;
-				return;
-			}
+			emptyItemHandler.Item = itemToAdd;
 		}
 	}
-
 
 	// This function is called by the LostItemReaction in order to remove an item from the inventory.
 	public void RemoveItem(Item itemToRemove)
 	{
-		// Go through all the item slots...
-		for (int i = 0; i < items.Length; i++)
+		var itemHandler = itemHandlers.FirstOrDefault(h => h.Item == itemToRemove);
+
+		if(itemHandler)
 		{
-			// ... if the item slot has the item to be removed...
-			if (items[i] == itemToRemove)
-			{
-				// ... set the item slot to null and set the image component to display nothing.
-				items[i] = null;
-				itemImages[i].sprite = null;
-				itemImages[i].enabled = false;
-				return;
-			}
+			itemHandler.Item = null;
 		}
 	}
 }

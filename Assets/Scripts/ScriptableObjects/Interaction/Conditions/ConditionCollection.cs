@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 // This class represents a single outcome from clicking
 // on an interactable.  It has an array of Conditions
@@ -15,16 +16,21 @@ public class ConditionCollection : ScriptableObject
 	public ReactionCollection reactionCollection;
 		// Reference to the ReactionCollection that will React should all the Conditions be met.
 
+	public Item dragDropItem;
+		// Reference to the Item which has to be drag-and-dropped.
 
 	// This is called by the Interactable one at a time for each of its ConditionCollections until one returns true.
-	public bool CheckAndReact()
+	public bool CheckAndReact(Item dragDropItem)
 	{
-		// Go through all Conditions...
-		for (int i = 0; i < requiredConditions.Length; i++)
+		if(!Equals(this.dragDropItem, dragDropItem))
 		{
-			// ... and check them against the AllConditions version of the Condition.  If they don't have the same satisfied flag, return false.
-			if (!AllConditions.CheckCondition(requiredConditions[i]))
-				return false;
+			return false;
+		}
+
+		// Go through all Conditions...
+		if (requiredConditions.Any(c => !AllConditions.CheckCondition(c)))
+		{
+			return false;
 		}
 
 		// If there is an ReactionCollection assigned, call its React function.

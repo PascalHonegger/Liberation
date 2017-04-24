@@ -19,13 +19,13 @@ public class Interactable : MonoBehaviour
 
 
 	// This is called when the player arrives at the interactionLocation.
-	public void Interact()
+	public void Interact(Item dragDropItem)
 	{
 		// Go through all the ConditionCollections...
 		for (int i = 0; i < conditionCollections.Length; i++)
 		{
 			// ... then check and potentially react to each.  If the reaction happens, exit the function.
-			if (conditionCollections[i].CheckAndReact())
+			if (conditionCollections[i].CheckAndReact(dragDropItem))
 				return;
 		}
 
