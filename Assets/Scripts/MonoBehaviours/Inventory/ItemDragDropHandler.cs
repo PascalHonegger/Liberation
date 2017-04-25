@@ -51,6 +51,7 @@ public class ItemDragDropHandler : MonoBehaviour, IBeginDragHandler, IDragHandle
 		_beforeDragPosition = transform.position;
 
 		transform.position = eventData.position;
+		GetComponent<CanvasGroup>().blocksRaycasts = false;
 
 		_beforeDragParent = transform.parent;
 		//TODO
@@ -74,6 +75,7 @@ public class ItemDragDropHandler : MonoBehaviour, IBeginDragHandler, IDragHandle
 		}
 		transform.SetParent(_beforeDragParent);
 		transform.position = _beforeDragPosition;
+		GetComponent<CanvasGroup>().blocksRaycasts = true;
 
 		_beforeDragParent = null;
 		_beforeDragPosition = default(Vector3);

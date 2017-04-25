@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 22230358}
   - component: {fileID: 11461466}
   - component: {fileID: 114249751478269698}
+  - component: {fileID: 225358397737126598}
   m_Layer: 5
   m_Name: ItemImage
   m_TagString: Untagged
@@ -194,3 +195,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b590aca0c165a3469754614452aa20b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &225358397737126598
+CanvasGroup:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154146}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0

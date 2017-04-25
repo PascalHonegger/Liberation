@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
 // This is one of the core features of the game.
 // Each one acts like a hub for all things that transpire
@@ -7,7 +9,7 @@
 // an event trigger.  The event trigger should tell the
 // player to approach the interactionLocation and the 
 // player should call the Interact function when they arrive.
-public class Interactable : MonoBehaviour
+public class Interactable : MonoBehaviour, IDropHandler
 {
 	public Transform interactionLocation;
 		// The position and rotation the player should go to in order to interact with this Interactable.
@@ -31,5 +33,10 @@ public class Interactable : MonoBehaviour
 
 		// If none of the reactions happened, use the default ReactionCollection.
 		defaultReactionCollection.React();
+	}
+
+	public void OnDrop(PointerEventData eventData)
+	{
+		FindObjectOfType<PlayerController>().InteractiWith(this, eventData.pointerDrag.GetComponent<ItemDragDropHandler>().Item);
 	}
 }

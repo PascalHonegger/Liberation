@@ -35,36 +35,14 @@ public class PlayerController : MonoBehaviour
 	// This function is called by the EventTrigger on an Interactable, the Interactable component is passed into it.
 	public void OnInteractableClick(Interactable interactable)
 	{
-		_currentDroppedItem = null;
-
-		// Set the destination of the nav mesh agent to the found destination position and start the nav mesh agent going.
-		_agent.SetDestination(interactable.interactionLocation.position);
-
-		// Store the interactble that was clicked on.
-		_currentInteractable = interactable;
+		InteractiWith(interactable, null);
 	}
 
 	// This function is called by the EventTrigger on an Interactable, the Interactable component is passed into it.
-	public void OnDrop(BaseEventData baseEventData)
+	public void InteractiWith(Interactable interactable, Item droppedItem)
 	{
-		Debug.Log("DROPPED");
-
-		var eventData = (PointerEventData) baseEventData;
-
-		var interactable = Physics.OverlapSphere(eventData.position, 1)
-		 .Except(new[] { GetComponent<Collider>() })
-		 .Select(c => c.gameObject.GetComponent<Interactable>())
-		 .FirstOrDefault();
-
-		if (!interactable)
-		{
-			Debug.Log("ABORT");
-
-			return;
-		}
-
-		_currentDroppedItem = eventData.pointerDrag.GetComponent<ItemDragDropHandler>().Item;
-
+		// Store the item which was dropped. This value is null if the user just clicked on an interactable.
+		_currentDroppedItem = droppedItem;
 
 		// Set the destination of the nav mesh agent to the found destination position and start the nav mesh agent going.
 		_agent.SetDestination(interactable.interactionLocation.position);
