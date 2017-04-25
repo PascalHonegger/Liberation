@@ -30,13 +30,6 @@ public class ItemDragDropHandler : MonoBehaviour, IBeginDragHandler, IDragHandle
 	private Item _item;
 
 
-	public Image Image
-	{
-		get
-		{
-			return _image;
-		}
-	}
 	private Image _image;
 
 	private Vector3 _beforeDragPosition;
@@ -54,8 +47,7 @@ public class ItemDragDropHandler : MonoBehaviour, IBeginDragHandler, IDragHandle
 		GetComponent<CanvasGroup>().blocksRaycasts = false;
 
 		_beforeDragParent = transform.parent;
-		//TODO
-		//transform.SetParent(transform.parent.parent);
+		transform.SetParent(transform.parent.parent.parent);
 	}
 
 	public void OnDrag(PointerEventData eventData)
