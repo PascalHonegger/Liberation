@@ -1,6 +1,4 @@
-using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using UnityEditor.IMGUI.Controls;
 using UnityEditor.SceneManagement;
 using UnityEditorInternal;
@@ -9,7 +7,7 @@ using UnityEngine;
 
 namespace UnityEditor.AI
 {
-    [CanEditMultipleObjects]
+	[CanEditMultipleObjects]
     [CustomEditor(typeof(NavMeshSurface))]
     class NavMeshSurfaceEditor : Editor
     {

@@ -7,6 +7,9 @@ public class ReactionCollection : MonoBehaviour
 {
 	public Reaction[] reactions = new Reaction[0]; // Array of all the Reactions to play when React is called.
 
+	public bool onlyReactOnce = false;
+
+	private bool alreadyReacted;
 
 	private void Start()
 	{
@@ -28,6 +31,13 @@ public class ReactionCollection : MonoBehaviour
 
 	public void React()
 	{
+		if(alreadyReacted && onlyReactOnce)
+		{
+			return;
+		}
+
+		alreadyReacted = true;
+
 		// Go through all the Reactions and call their React function.
 		for (int i = 0; i < reactions.Length; i++)
 		{

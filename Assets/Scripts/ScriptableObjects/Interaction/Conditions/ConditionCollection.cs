@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using UnityEngine;
+﻿using UnityEngine;
 
 // This class represents a single outcome from clicking
 // on an interactable.  It has an array of Conditions
@@ -9,9 +8,6 @@ public class ConditionCollection : ScriptableObject
 {
 	public string description;
 		// Description of the ConditionCollection.  This is used purely for identification in the inspector.
-
-	public Condition[] requiredConditions = new Condition[0];
-		// The Conditions that need to be met in order for the ReactionCollection to React.
 
 	public ReactionCollection reactionCollection;
 		// Reference to the ReactionCollection that will React should all the Conditions be met.
@@ -23,12 +19,6 @@ public class ConditionCollection : ScriptableObject
 	public bool CheckAndReact(Item dragDropItem)
 	{
 		if(!Equals(this.dragDropItem, dragDropItem))
-		{
-			return false;
-		}
-
-		// Go through all Conditions...
-		if (requiredConditions.Any(c => !AllConditions.CheckCondition(c)))
 		{
 			return false;
 		}
