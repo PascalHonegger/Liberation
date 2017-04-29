@@ -29,4 +29,12 @@ public class Inventory : MonoBehaviour
 			itemHandler.Item = null;
 		}
 	}
+
+	public void Reset()
+	{
+		foreach (var itemHandler in itemHandlers)
+		{
+			itemHandler.Item = null;
+		}
+	}
 }

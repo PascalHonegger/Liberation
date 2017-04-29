@@ -19,8 +19,6 @@ public class SceneController : MonoBehaviour
 	public float fadeDuration = 1f; // How long it should take to fade to and from black.
 	public string startingSceneName = "SecurityRoom";
 	// The name of the scene that should be loaded first.
-	public SaveData playerSaveData;
-	// Reference to the ScriptableObject which stores the name of the StartingPosition in the next scene.
 
 
 	private bool isFading; // Flag used to determine if the Image is currently fading to or from black.
