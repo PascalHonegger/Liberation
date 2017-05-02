@@ -18,5 +18,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Graveyard.unity
     guid: 831956abb660c464a848aff829b18af8
   - enabled: 1
+    path: Assets/Scenes/BrokenHeart.unity
+    guid: cad9df54f91a5a54988a43e627237163
+  - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: 598fbc94b72b08447803f14aab1791fb
