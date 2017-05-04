@@ -1,135 +1,173 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en-us">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | %UNITY_WEB_NAME%</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        background-color: #333;
-      }
-      canvas {
-        width: 100%; height: 100%; position: absolute;
-      }
-      div#loadingBox {
-        width: 100%; height: 20px; position: absolute;
-        top: 50%; margin-top: -10px; text-align: center;
-      }
-      div#bgBar {
-        display: none; position: absolute;
-        width: 200px; margin-left: -100px;
-        left: 50%;
-        height: 2px;
-        background-color: #FFF;
-        border-radius: 2px;
-      }
-      div#progressBar {
-        display: none;
-        left: 50%;
-        position: absolute;
-        margin-left: -100px;
-        width: 0px;
-        height: 2px;
-        background-color: #990000;
-        border-radius: 2px;
-      }
-      p#loadingInfo {
-        color: #FFF;
-        letter-spacing: 1px;
-        position: absolute;
-        width: 100%;
-        font-family: "Monaco", sans-serif;
-        text-transform: uppercase;
-        text-align: center;
-        font-size: 8px;
-        margin-top: 10px;
-      }
-      div#spinner {
-        position: absolute;
-        height: 2px;
-        left: 50%;
-        margin-left: -100px;
-        width: 200px;
-        position: relative;
-        overflow: hidden;
-        background-color: #FFF;
-      }
-      div#spinner:before{
-        display: block;
-        position: absolute;
-        content: "";
-        left: -200px;
-        width: 200px;
-        height: 4px;
-        background-color: #990000;
-        animation: loading 2s linear infinite;
-      }
-      @keyframes loading {
-        from {left: -50%; width: 30%;}
-        50% {width: 30%;}
-        70% {width: 70%;}
-        80% { left: 50%;}
-        95% {left: 120%;}
-        to {left: 100%;}
-      }
-    </style>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Unity WebGL Player | %UNITY_WEB_NAME%</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      overflow:hidden;
+    }
 
-    <script type='text/javascript'>
-      function UnityProgress (dom) {
-        this.progress = 0.0;
-        this.message = "";
-        this.dom = dom;
-        var parent = dom.parentNode;
-        this.SetProgress = function (progress) {
-          if (this.progress < progress)
-            this.progress = progress;
-          if (progress > 0) {
-            document.getElementById("spinner").style.display = "none";
-            document.getElementById("bgBar").style.display = "block";
-            document.getElementById("progressBar").style.display = "inherit";
-          }
-          if (progress == 1) {
-            document.getElementById("spinner").style.display = "inherit";
-            document.getElementById("bgBar").style.display = "none";
-            document.getElementById("progressBar").style.display = "none";
-          }
-          this.Update();
-        }
-        this.SetMessage = function (message) {
-          if(!message || message.length == 0 && this.progress > 0) {
-            this.SetProgress(1);
-            return;
-          }
-          this.message = message;
-          this.Update();
-        }
-        this.Clear = function() {
-          document.getElementById("loadingBox").style.display = "none";
-        }
-        this.Update = function() {
-          var length = 200 * Math.min(this.progress, 1);
-          bar = document.getElementById("progressBar")
-          bar.style.width = length + "px";
-          document.getElementById("loadingInfo").innerHTML = this.message;
-        }
-        this.Update();
+    div#webgl-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    div#loadingBox {
+      width: 100%;
+      height: 0px;
+      position: absolute;
+      top: 50%;
+      margin-top: 137px;
+      text-align: center;
+    }
+
+    div#icon {
+      width: 300px;
+      height: 310px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -185px;
+      margin-left: -150px;
+      background-image: url("Template/anthill.png");
+      background-repeat: no-repeat;
+      box-shadow: 1px 1px 5px #141414;
+    }
+
+    div#box {
+      width: 328px;
+      height: 367px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -199px;
+      margin-left: -164px;
+      background: #222;
+      box-shadow: 1px 1px 5px #000;
+    }
+
+    div#bgBar {
+      display: none;
+      position: absolute;
+      width: 300px;
+      margin-left: -150px;
+      left: 50%;
+      height: 18px;
+      background-color: #882121;
+      box-shadow: 1px 1px 5px #111;
+    }
+
+    div#progressBar {
+      display: none;
+      left: 50%;
+      position: absolute;
+      margin-left: -150px;
+      width: 0px;
+      height: 18px;
+      background-color: #dc4241;
+    }
+
+    p#loadingInfo {
+      color: #fff;
+      letter-spacing: 1px;
+      position: absolute;
+      width: 100%;
+      font-family: sans-serif;
+      text-align: center;
+      top: 50%;
+      font-size: 11px;
+      font-weight: 500;
+      margin-top: 140px;
+      text-shadow: 0px 0px 5px #000;
+    }
+
+    div#spinner {
+      position: absolute;
+      height: 18px;
+      left: 50%;
+      margin-left: -150px;
+      width: 300px;
+      position: relative;
+      overflow: hidden;
+      background-color: #882121;
+      box-shadow: 1px 1px 5px #111;
+    }
+
+    div#spinner:before {
+      display: block;
+      position: absolute;
+      content: "";
+      width: 150%;
+      margin-left: -10px;
+      height: 10px;
+      background-color: #e85352;
+      transform: rotate(-5deg);
+      animation: loading 1s linear infinite;
+    }
+
+    @keyframes loading {
+      from {
+        top: -185%
       }
-    </script>
-    </script>
-  </head>
-  <body>
-    <canvas class="emscripten" id="canvas"
-	    oncontextmenu="event.preventDefault()"></canvas>
-    <div id="loadingBox">
-      <div id="spinner"></div>
-      <div id="bgBar"></div>
-      <div id="progressBar"></div>
-      <p id="loadingInfo">Loading...</p>
-    </div>
-    %UNITY_WEBGL_LOADER_GLUE%
-  </body>
+      to {
+        top: 225%
+      }
+    }
+  </style>
+
+  <script src="%UNITY_WEBGL_LOADER_URL%"></script>
+  <script>
+    function UnityProgress(gameInstance, progress) {
+      var container = document.getElementById('gameContainer');
+      if (container) document.body.style.background = container.style.background;
+
+      if (!gameInstance.Module) {
+         return;
+      } else if (progress === "complete") {
+        document.getElementById("loadingBox").style.display = "none";
+        document.getElementById("icon").style.display = "none";
+        document.getElementById("loadingInfo").style.display = "none";
+        document.getElementById("box").style.display = "none";
+        return;
+      } else if (progress == 1) {
+        document.getElementById("loadingInfo").innerHTML = "PROCESSING...";
+        document.getElementById("spinner").style.display = "inherit";
+        document.getElementById("bgBar").style.display = "none";
+        document.getElementById("progressBar").style.display = "none";
+      } else if (progress > 0) {
+        document.getElementById("progressBar").style.width = 300 * progress + "px"
+        document.getElementById("loadingInfo").innerHTML = Math.round(progress * 100) + "%";
+        document.getElementById("spinner").style.display = "none";
+        document.getElementById("bgBar").style.display = "block";
+        document.getElementById("progressBar").style.display = "inherit";
+      }
+    }
+    var gameInstance = UnityLoader.instantiate("gameContainer", "%UNITY_WEBGL_BUILD_URL%", {
+      onProgress: UnityProgress,
+      Module: {
+        onRuntimeInitialized: function() { UnityProgress(gameInstance, "complete") }
+      }
+    });
+  </script>
+</head>
+<body>
+  <div id="webgl-content" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px">
+    <div id="gameContainer" style="width: %UNITY_WIDTH%px; height: %UNITY_HEIGHT%px"></div>
+  </div>
+  <div id="box"></div>
+  <div id="loadingBox">
+    <div id="spinner"></div>
+    <div id="bgBar"></div>
+    <div id="progressBar"></div>
+  </div>
+  <a target="_blank" href="http://www.kongregate.com"> <div id="icon"></div> </a>
+  <p id="loadingInfo"></p>
+</body>
 </html>
