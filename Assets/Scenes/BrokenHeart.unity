@@ -399,6 +399,10 @@ Prefab:
       propertyPath: m_RaycastTarget
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22413402, guid: bd26dac15723bf047941895f28e6c242, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 670
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bd26dac15723bf047941895f28e6c242, type: 2}
   m_IsPrefabParent: 0
@@ -561,7 +565,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f8a149ea5a3aa4583dc1cab3334cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: 
+  message: This heart seems broken. It probably belongs to a sad person
   textColor: {r: 1, g: 1, b: 1, a: 1}
   delay: 0
 --- !u!1 &966191954
@@ -910,8 +914,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c32f1270758a64ba4bc71dbf7e498b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 0.1
-  gameObject: {fileID: 1502168535}
+  delay: 0
+  gameObject: {fileID: 966191954}
   activeState: 0
 --- !u!1001 &1502168534
 Prefab:
@@ -1003,10 +1007,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d48734bd22479a14cb1a52b40aa09db4, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1502168535 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 194222, guid: d48734bd22479a14cb1a52b40aa09db4, type: 2}
-  m_PrefabInternal: {fileID: 1502168534}
 --- !u!4 &1502168536 stripped
 Transform:
   m_PrefabParentObject: {fileID: 474418, guid: d48734bd22479a14cb1a52b40aa09db4, type: 2}
@@ -1220,7 +1220,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   delay: 2
-  sceneName: 
+  sceneName: Finale
 --- !u!1 &2113584751
 GameObject:
   m_ObjectHideFlags: 0

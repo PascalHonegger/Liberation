@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8a951f343807e3a45b1c0575c2af7cf8
-timeCreated: 1491911362
+timeCreated: 1494009318
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -43,7 +43,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   maxTextureSizeSet: 0
@@ -77,7 +77,35 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
+    outline:
+    - - {x: -240, y: 135}
+      - {x: -240, y: -135}
+      - {x: -193, y: -135}
+      - {x: -193, y: -130}
+      - {x: -189, y: -130}
+      - {x: -189, y: -129}
+      - {x: -188, y: -129}
+      - {x: -188, y: -125}
+      - {x: -189, y: -125}
+      - {x: -189, y: -119}
+      - {x: -188, y: -119}
+      - {x: -188, y: -124}
+      - {x: -187, y: -124}
+      - {x: -187, y: -126}
+      - {x: -186, y: -126}
+      - {x: -186, y: -124}
+      - {x: -185, y: -124}
+      - {x: -185, y: -127}
+      - {x: -184, y: -127}
+      - {x: -184, y: -125}
+      - {x: -183, y: -125}
+      - {x: -183, y: -123}
+      - {x: -182, y: -123}
+      - {x: -182, y: -119}
+      - {x: -181, y: -119}
+      - {x: -181, y: -135}
+      - {x: 240, y: -135}
+      - {x: 240, y: 135}
   spritePackingTag: 
   userData: 
   assetBundleName: 
