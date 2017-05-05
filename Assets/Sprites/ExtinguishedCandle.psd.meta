@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 87fb4bd02a94be347a77b982bb19163d
-timeCreated: 1494019083
+guid: a3c7fd0737904914291e8ebd9c1ade66
+timeCreated: 1494017018
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -78,12 +78,16 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline:
-    - - {x: -7, y: 6}
-      - {x: -7, y: -2}
-      - {x: -3, y: -6}
-      - {x: 6, y: -6}
-      - {x: 7, y: -4}
-      - {x: 7, y: 6}
+    - - {x: 16, y: -39}
+      - {x: -1, y: -39}
+      - {x: -1, y: -82}
+      - {x: -7, y: -82}
+      - {x: -7, y: -88}
+      - {x: 16, y: -88}
+      - {x: 16, y: -82}
+      - {x: 10, y: -82}
+      - {x: 10, y: -55}
+      - {x: 16, y: -55}
   spritePackingTag: 
   userData: 
   assetBundleName: 

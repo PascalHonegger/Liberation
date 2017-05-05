@@ -1439,7 +1439,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.1
   m_BuildHeightMesh: 0
-  m_BakedNavMeshData: {fileID: 23800000, guid: 516508659926e0a4c81ba1ca7f546ac8, type: 2}
+  m_BakedNavMeshData: {fileID: 23800000, guid: b27821da1acb37b49a7a19d23b38d661, type: 2}
 --- !u!114 &1184750262
 MonoBehaviour:
   m_ObjectHideFlags: 0
