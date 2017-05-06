@@ -2,10 +2,10 @@
 
 public class OnClickLoadStart : MonoBehaviour
 {
-	public string SceneName = "NavMeshExample";
+	public string SceneName = "Introduction";
 
 	public void OnClick()
 	{
-		FindObjectOfType<SceneController>().FadeAndLoadSceneByName(SceneName);
+		FindObjectOfType<SceneController>().FadeAndLoadSceneByName(SceneName, false);
 	}
 }

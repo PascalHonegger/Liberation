@@ -4,6 +4,6 @@ public class RestartAfterAnimation : MonoBehaviour {
 	private void LoadMainMenu()
 	{
 		FindObjectOfType<Inventory>().Reset();
-		FindObjectOfType<SceneController>().FadeAndLoadSceneByName("MainMenu");
+		FindObjectOfType<SceneController>().FadeAndLoadSceneByName("MainMenu", false);
 	}
 }

@@ -20,6 +20,6 @@ public class SceneReaction : DelayedReaction
 	protected override void ImmediateReaction()
 	{
 		// Start the scene loading process.
-		_sceneController.FadeAndLoadScene(this);
+		_sceneController.FadeAndLoadSceneByName(sceneName);
 	}
 }

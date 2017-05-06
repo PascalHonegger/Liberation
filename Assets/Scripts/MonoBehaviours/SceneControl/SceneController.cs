@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // This script exists in the Persistent scene and manages the content
 // based scene's loading.  It works on a principle that the
@@ -11,15 +12,12 @@ using UnityEngine.SceneManagement;
 // the player leaves them.
 public class SceneController : MonoBehaviour
 {
-	public event Action BeforeSceneUnload; // Event delegate that is called just before a scene is unloaded.
-	public event Action AfterSceneLoad; // Event delegate that is called just after a scene is loaded.
-
-
 	public CanvasGroup faderCanvasGroup; // The CanvasGroup that controls the Image used for fading to black.
 	public float fadeDuration = 1f; // How long it should take to fade to and from black.
-	public string startingSceneName = "SecurityRoom";
+	public string startingSceneName = "MainMenu";
 	// The name of the scene that should be loaded first.
 
+	public Image logoImage;
 
 	private bool isFading; // Flag used to determine if the Image is currently fading to or from black.
 
@@ -27,42 +25,32 @@ public class SceneController : MonoBehaviour
 	private IEnumerator Start()
 	{
 		// Set the initial alpha to start off with a black screen.
+		logoImage.enabled = false;
 		faderCanvasGroup.alpha = 1f;
 
 		// Start the first scene loading and wait for it to finish.
 		yield return StartCoroutine(LoadSceneAndSetActive(startingSceneName));
 
 		// Once the scene is finished loading, start fading in.
-		StartCoroutine(Fade(0f));
+		StartCoroutine(FadeWithoutLogo(0f, 1f));
 	}
 
 
-	// This is the main external point of contact and influence from the rest of the project.
-	// This will be called by a SceneReaction when the player wants to switch scenes.
-	public void FadeAndLoadScene(SceneReaction sceneReaction)
-	{
-		FadeAndLoadSceneByName(sceneReaction.sceneName);
-	}
-
-	public void FadeAndLoadSceneByName(string sceneName)
+	public void FadeAndLoadSceneByName(string sceneName, bool showLogo = true)
 	{
 		// If a fade isn't happening then start fading and switching scenes.
 		if (!isFading)
 		{
-			StartCoroutine(FadeAndSwitchScenes(sceneName));
+			StartCoroutine(FadeAndSwitchScenes(sceneName, showLogo));
 		}
 	}
 
 
 	// This is the coroutine where the 'building blocks' of the script are put together.
-	private IEnumerator FadeAndSwitchScenes(string sceneName)
+	private IEnumerator FadeAndSwitchScenes(string sceneName, bool showLogo)
 	{
 		// Start fading to black and wait for it to finish before continuing.
-		yield return StartCoroutine(Fade(1f));
-
-		// If this event has any subscribers, call it.
-		if (BeforeSceneUnload != null)
-			BeforeSceneUnload();
+		yield return StartCoroutine(showLogo ? Fade(1f) : FadeWithoutLogo(1f));
 
 		// Unload the current active scene.
 		yield return SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
@@ -70,12 +58,8 @@ public class SceneController : MonoBehaviour
 		// Start loading the given scene and wait for it to finish.
 		yield return StartCoroutine(LoadSceneAndSetActive(sceneName));
 
-		// If this event has any subscribers, call it.
-		if (AfterSceneLoad != null)
-			AfterSceneLoad();
-
 		// Start fading back in and wait for it to finish before exiting the function.
-		yield return StartCoroutine(Fade(0f));
+		yield return StartCoroutine(showLogo ? Fade(0f) : FadeWithoutLogo(0f));
 	}
 
 
@@ -91,8 +75,26 @@ public class SceneController : MonoBehaviour
 		SceneManager.SetActiveScene(newlyLoadedScene);
 	}
 
+	private IEnumerator FadeWithoutLogo(float finalAlpha)
+	{
+		return FadeWithoutLogo(finalAlpha, fadeDuration);
+	}
+
+	private IEnumerator FadeWithoutLogo(float finalAlpha, float effectiveFloatDuration)
+	{
+		logoImage.enabled = false;
+		yield return Fade(finalAlpha, fadeDuration);
+
+	}
 
 	private IEnumerator Fade(float finalAlpha)
+	{
+		logoImage.enabled = true;
+		return Fade(finalAlpha, fadeDuration);
+	}
+
+
+	private IEnumerator Fade(float finalAlpha, float effectiveFloatDuration)
 	{
 		// Set the fading flag to true so the FadeAndSwitchScenes coroutine won't be called again.
 		isFading = true;
@@ -101,7 +103,7 @@ public class SceneController : MonoBehaviour
 		faderCanvasGroup.blocksRaycasts = true;
 
 		// Calculate how fast the CanvasGroup should fade based on it's current alpha, it's final alpha and how long it has to change between the two.
-		float fadeSpeed = Mathf.Abs(faderCanvasGroup.alpha - finalAlpha) / fadeDuration;
+		float fadeSpeed = Mathf.Abs(faderCanvasGroup.alpha - finalAlpha) / effectiveFloatDuration;
 
 		// While the CanvasGroup hasn't reached the final alpha yet...
 		while (!Mathf.Approximately(faderCanvasGroup.alpha, finalAlpha))
