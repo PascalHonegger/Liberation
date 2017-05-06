@@ -84,7 +84,7 @@ TextureImporter:
       - {x: 0, y: -6}
       - {x: 4, y: -2}
       - {x: 4, y: 6}
-  spritePackingTag: 
+  spritePackingTag: item
   userData: 
   assetBundleName: 
   assetBundleVariant: 
