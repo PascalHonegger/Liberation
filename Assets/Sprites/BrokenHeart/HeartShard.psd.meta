@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: d58621b0120c25444986324ac4091592
-timeCreated: 1493729465
+guid: 87fb4bd02a94be347a77b982bb19163d
+timeCreated: 1494074014
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -77,8 +77,14 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
-  spritePackingTag: item
+    outline:
+    - - {x: -6.5, y: 6}
+      - {x: -6.5, y: -2}
+      - {x: -2.5, y: -6}
+      - {x: 2.5, y: -6}
+      - {x: 6.5, y: -2}
+      - {x: 6.5, y: 6}
+  spritePackingTag: brokenheart
   userData: 
   assetBundleName: 
   assetBundleVariant: 

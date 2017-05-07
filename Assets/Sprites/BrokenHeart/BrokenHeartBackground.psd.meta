@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 55a98b18f408909479efe6b823bf6f3c
-timeCreated: 1494018005
+guid: 0efa56a66a05a6b4bae44dda4a3277a9
+timeCreated: 1493705726
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -78,7 +78,7 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline: []
-  spritePackingTag: general
+  spritePackingTag: brokenheart
   userData: 
   assetBundleName: 
   assetBundleVariant: 

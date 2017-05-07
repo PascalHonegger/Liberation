@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 6318f4453c3f2814e97e196ce1b70fb6
-timeCreated: 1491911304
+guid: 8a951f343807e3a45b1c0575c2af7cf8
+timeCreated: 1494168775
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -43,7 +43,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: -1
+  spriteTessellationDetail: 0
   textureType: 8
   textureShape: 1
   maxTextureSizeSet: 0
@@ -77,8 +77,12 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline: []
-  spritePackingTag: item
+    outline:
+    - - {x: -240, y: 135}
+      - {x: -240, y: -135}
+      - {x: 240, y: -135}
+      - {x: 240, y: 135}
+  spritePackingTag: graveyard
   userData: 
   assetBundleName: 
   assetBundleVariant: 
