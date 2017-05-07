@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 2915984667bed294ba676712392fb04c
-timeCreated: 1494166769
+guid: 598b486cefa14224190086af79a85d61
+timeCreated: 1494167985
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -78,7 +78,7 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline: []
-  spritePackingTag: candle
+  spritePackingTag: background
   userData: 
   assetBundleName: 
   assetBundleVariant: 
