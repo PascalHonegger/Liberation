@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: a3c7fd0737904914291e8ebd9c1ade66
-timeCreated: 1494176473
+guid: 2b4605f447e81634d8fa242524247684
+timeCreated: 1494176400
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -77,15 +77,8 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
     sprites: []
-    outline:
-    - - {x: -1.5, y: -1.5}
-      - {x: -3.5, y: -2.5}
-      - {x: -3.5, y: -12.5}
-      - {x: -1.5, y: -14.5}
-      - {x: 2.5, y: -14.5}
-      - {x: 4.5, y: -12.5}
-      - {x: 4.5, y: -1.5}
-  spritePackingTag: candle
+    outline: []
+  spritePackingTag: brokenheart
   userData: 
   assetBundleName: 
   assetBundleVariant: 
