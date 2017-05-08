@@ -283,6 +283,19 @@ MonoBehaviour:
   delay: 1.5
   gameObject: {fileID: 26690928}
   activeState: 1
+--- !u!114 &238127474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d482a9551d8b074097fdb7beded4043, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 1.5
+  item: {fileID: 11400000, guid: 79e8e828bb7d260449b4f895b62967fe, type: 2}
 --- !u!1 &281146398
 GameObject:
   m_ObjectHideFlags: 0
@@ -569,6 +582,7 @@ MonoBehaviour:
   - {fileID: 689686976}
   - {fileID: 918746260}
   - {fileID: 65993569}
+  - {fileID: 238127474}
   onlyReactOnce: 1
 --- !u!114 &1171553127
 MonoBehaviour:
