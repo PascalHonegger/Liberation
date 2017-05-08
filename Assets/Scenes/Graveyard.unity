@@ -198,20 +198,6 @@ MonoBehaviour:
   reactions:
   - {fileID: 423410086}
   onlyReactOnce: 0
---- !u!114 &133252056
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a931d1c243b462c46bad5f7d2aae5949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 0
-  animator: {fileID: 0}
-  trigger: 
 --- !u!1001 &161513193
 Prefab:
   m_ObjectHideFlags: 0
@@ -968,10 +954,6 @@ Prefab:
       propertyPath: reactions.Array.data[1]
       value: 
       objectReference: {fileID: 2009224905}
-    - target: {fileID: 11441280, guid: d48734bd22479a14cb1a52b40aa09db4, type: 2}
-      propertyPath: reactions.Array.data[2]
-      value: 
-      objectReference: {fileID: 133252056}
     - target: {fileID: 11441280, guid: d48734bd22479a14cb1a52b40aa09db4, type: 2}
       propertyPath: reactions.Array.data[3]
       value: 
