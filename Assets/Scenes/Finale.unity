@@ -157,7 +157,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 44225740d09658c4f80a1c3e1ae78173, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b02ee15cef8fc984089b934b39a442b9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -173,7 +173,7 @@ Transform:
   m_GameObject: {fileID: 26690928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 4, y: 4, z: 4}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -380,9 +380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f8a149ea5a3aa4583dc1cab3334cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 3
   message: Drop every fear
   textColor: {r: 1, g: 1, b: 1, a: 1}
-  delay: 3
 --- !u!1 &951309060
 GameObject:
   m_ObjectHideFlags: 0
@@ -581,9 +581,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f8a149ea5a3aa4583dc1cab3334cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0
   message: Take every chance
   textColor: {r: 1, g: 1, b: 1, a: 1}
-  delay: 0
 --- !u!114 &1366652116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -961,9 +961,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f8a149ea5a3aa4583dc1cab3334cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  delay: 0
   message: It seems like a candle belongs here
   textColor: {r: 1, g: 1, b: 1, a: 1}
-  delay: 0
 --- !u!1001 &2084590525
 Prefab:
   m_ObjectHideFlags: 0
