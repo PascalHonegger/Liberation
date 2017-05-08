@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c32f1270758a64ba4bc71dbf7e498b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
+  delay: 4
   gameObject: {fileID: 495642465}
   activeState: 0
 --- !u!114 &179148808
@@ -133,9 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f8a149ea5a3aa4583dc1cab3334cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: The darkness has always been my friend.
-  textColor: {r: 1, g: 1, b: 1, a: 1}
   delay: 0
+  message: The darkness has always been my friend
+  textColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &223974347
 Prefab:
   m_ObjectHideFlags: 0
@@ -283,9 +283,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03f8a149ea5a3aa4583dc1cab3334cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  message: But it seems like something is changing.
+  delay: 8
+  message: But it seems like something is changing
   textColor: {r: 1, g: 1, b: 1, a: 1}
-  delay: 3
 --- !u!1001 &347469006
 Prefab:
   m_ObjectHideFlags: 0
@@ -616,7 +616,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 11441280, guid: d48734bd22479a14cb1a52b40aa09db4, type: 2}
       propertyPath: reactions.Array.size
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 474418, guid: d48734bd22479a14cb1a52b40aa09db4, type: 2}
       propertyPath: m_LocalPosition.x
@@ -718,6 +718,10 @@ Prefab:
       propertyPath: reactions.Array.data[6]
       value: 
       objectReference: {fileID: 1473665395}
+    - target: {fileID: 11441280, guid: d48734bd22479a14cb1a52b40aa09db4, type: 2}
+      propertyPath: reactions.Array.data[7]
+      value: 
+      objectReference: {fileID: 1192004733}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d48734bd22479a14cb1a52b40aa09db4, type: 2}
   m_IsPrefabParent: 0
@@ -789,6 +793,20 @@ MonoBehaviour:
   m_VoxelSize: 0.1
   m_BuildHeightMesh: 0
   m_BakedNavMeshData: {fileID: 23800000, guid: 192cd01fd91255a488fa847ea6c77559, type: 2}
+--- !u!114 &1192004733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03f8a149ea5a3aa4583dc1cab3334cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 4
+  message: After my father died I felt lost
+  textColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1391068382 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4725564651894056, guid: ad63e45bbb4de7843a32e01d3c621bce,
@@ -805,7 +823,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24dc6b17b276d6948903ade30dec71eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 5
+  delay: 12
   sceneName: Graveyard
 --- !u!114 &1473665395
 MonoBehaviour:
@@ -818,7 +836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c32f1270758a64ba4bc71dbf7e498b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 3
+  delay: 8
   gameObject: {fileID: 362792624}
   activeState: 0
 --- !u!114 &1640010745
@@ -832,7 +850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b804958e1981f9544989d65e32719692, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 2
+  delay: 8
   item: {fileID: 11400000, guid: 79e8e828bb7d260449b4f895b62967fe, type: 2}
 --- !u!1001 &1809063285
 Prefab:
@@ -897,7 +915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80c32f1270758a64ba4bc71dbf7e498b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 1
+  delay: 4
   gameObject: {fileID: 362792624}
   activeState: 1
 --- !u!1 &1919139516
